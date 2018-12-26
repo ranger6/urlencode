@@ -15,8 +15,8 @@ func TestUrlencode(t *testing.T) {
 		{"", ""},
 		{"http://www.hp.com/path/to/target", "http://www.hp.com/path/to/target"},
 		{"http://www.hp.com/path to target", "http://www.hp.com/path%20to%20target"},
-		{"http://borax.gre.hp.com/canna/registry/ca/CANNA Root Certificate Authority/cert/1f541a81/cert.pem",
-		 "http://borax.gre.hp.com/canna/registry/ca/CANNA%20Root%20Certificate%20Authority/cert/1f541a81/cert.pem"},
+		{"http://muir.remulac.fr/canna/registry/ca/CANNA Root Certificate Authority/cert/1f541a81/cert.pem",
+			"http://muir.remulac.fr/canna/registry/ca/CANNA%20Root%20Certificate%20Authority/cert/1f541a81/cert.pem"},
 	}
 	for _, test := range tests {
 		got := urlencode(test.in)
@@ -27,7 +27,7 @@ func TestUrlencode(t *testing.T) {
 }
 
 func ExampleUrlencode() {
-	fmt.Println(urlencode("http://borax.fra.hp.com/canna/registry/CANNA Root Certificate Authority/"))
+	fmt.Println(urlencode("http://muir.remulac.fr/canna/registry/CANNA Root Certificate Authority/"))
 	// Output:
-	// http://borax.fra.hp.com/canna/registry/CANNA%20Root%20Certificate%20Authority/
+	// http://muir.remulac.fr/canna/registry/CANNA%20Root%20Certificate%20Authority/
 }
